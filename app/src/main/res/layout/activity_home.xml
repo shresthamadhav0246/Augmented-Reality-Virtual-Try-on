@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Location TextView -->
+        <TextView
+            android:id="@+id/locationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_location_on_24"
+            android:drawablePadding="8dp"
+            android:padding="4dp"
+            android:text="Deliver to \n12,Dhaka,1212, Mohammadpur Bang..."
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_notifications_none_24" />
+
+    </RelativeLayout>
+
+    <!-- ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Search bar -->
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_edittext"
+                android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:drawablePadding="8dp"
+            android:hint="Search for products"
+            android:padding="12dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+
+
+            <!-- Promotional banner -->
+    <RelativeLayout
+        android:id="@+id/promoBanner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/searchEditText"
+        android:background="@drawable/banner"
+        android:padding="16dp">
+
+        <!-- Text and button inside the banner -->
+        <TextView
+            android:id="@+id/bannerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Ramadan Offers\nGet 25%"
+            android:textColor="#555555"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/grabOfferButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bannerTextView"
+            android:background="@drawable/button_background"
+            android:backgroundTint="#DE8421"
+            android:layout_marginTop="20dp"
+            android:text="Grab Offer" />
+    </RelativeLayout>
+
+    <!-- Recommended products list -->
+    <LinearLayout
+        android:id="@+id/recommendedSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/promoBanner"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+
+        <!-- Title and 'View All' option -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/recommendedForYouText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recommended for you"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/viewAllText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="4dp"
+                android:text="View All"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#DE8421" />
+        </RelativeLayout>
+
+        <!-- Horizontal ScrollView for products -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/productContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/allProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recommendedSection"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical">
+
+        <!-- Title and 'View All' option -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E7C991"
+            android:padding="8dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free Shipping on all Orders"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="4dp"
+                android:text="Limited-time offer"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#DE8421"
+                android:textSize="10sp" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+            />
+    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#ECEEEF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Icons for the navigation bar -->
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_home_24" />
+
+        <ImageView
+            android:id="@+id/category"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/category" />
+
+
+        <ImageView
+            android:id="@+id/userProfileIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_person_outline_24" />
+
+        <!-- More icons will follow with equal 'layout_weight' values -->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

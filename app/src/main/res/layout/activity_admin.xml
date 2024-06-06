@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3">
+
+    <!-- Header with Admin Dashboard Title -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="40dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_baseline_menu_24"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/adminIcon"-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:src="@drawable/ic_baseline_person_pin_24"-->
+<!--            android:layout_toEndOf="@id/menuIcon"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_centerVertical="true" />-->
+
+        <TextView
+            android:id="@+id/adminTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/menuIcon"
+            android:layout_marginStart="12dp"
+            android:layout_centerVertical="true"
+            android:text="Admin Dashboard"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_person_pin_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <!-- Grid of CardViews -->
+    <GridLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:columnOrderPreserved="false"
+        android:layout_below="@id/header">
+
+        <!-- Card 1: Add Product -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_add_product"
+            android:layout_width="170dp"
+            android:layout_height="220dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+           >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <ImageView
+                    android:id="@+id/product_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/products"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/productTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Products"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/product_img"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    >
+
+                </TextView>
+
+
+                <!-- Card Content Here -->
+                <!-- Replace with actual icon and text -->
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_manage_category"
+            android:layout_width="170dp"
+            android:layout_height="220dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <ImageView
+                    android:id="@+id/category_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/category"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/category_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Category"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/category_img"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+
+                    >
+
+                </TextView>
+
+
+                <!-- Card Content Here -->
+                <!-- Replace with actual icon and text -->
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_manage_users"
+            android:layout_width="170dp"
+            android:layout_height="220dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <ImageView
+                    android:id="@+id/user_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/users"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/user_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Users"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/user_img"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+
+                    >
+
+                </TextView>
+
+
+                <!-- Card Content Here -->
+                <!-- Replace with actual icon and text -->
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_manage_order"
+            android:layout_width="170dp"
+            android:layout_height="220dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <ImageView
+                    android:id="@+id/order_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/checklist"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/order_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Order"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/order_img"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+
+                    >
+
+                </TextView>
+
+
+                <!-- Card Content Here -->
+                <!-- Replace with actual icon and text -->
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+
+
+
+
+    <!-- Footer for additional admin controls or information (if necessary) -->
+    <!-- RelativeLayout or LinearLayout with TextViews or Buttons -->
+
+</RelativeLayout>

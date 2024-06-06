@@ -1,0 +1,101 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FurnitureVirtualTryOn">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/arFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+<!--    &lt;!&ndash; Bottom Controls Container &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="#BBFFFFFF"-->
+<!--        android:padding="8dp">-->
+
+<!--        &lt;!&ndash; Rotate Button &ndash;&gt;-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/btnRotate"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_baseline_rotate_right_24"-->
+<!--            android:contentDescription="Rotate Furniture"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"/>-->
+
+<!--        &lt;!&ndash; Scale Button &ndash;&gt;-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/btnScale"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_baseline_settings_overscan_24"-->
+<!--            android:contentDescription="Scale Furniture"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"/>-->
+
+<!--    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:padding="16dp">
+
+        <!-- Description Icon -->
+        <ImageView
+            android:id="@+id/descriptionIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_description_24"
+            android:layout_gravity="start"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Product Description" />
+
+        <!-- Capture Icon -->
+        <ImageView
+            android:id="@+id/captureImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_baseline_camera_24"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Capture Image" />
+
+        <!-- Cart Icon -->
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_shopping_cart_checkout_24"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Cart Icon" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/crossIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/letter_x"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Close Icon" />
+
+
+</FrameLayout>

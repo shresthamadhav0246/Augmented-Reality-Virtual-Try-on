@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Header with Back button and Cart icon -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Back Button Icon -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_alignParentStart="true" />
+
+        <!-- Cart Icon with Badge Indicator -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/cartIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+            <!-- Badge Indicator (Assuming you want to show a notification number) -->
+            <TextView
+                android:id="@+id/cartBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/cartIcon"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/badge_background"
+                android:gravity="center"
+                android:minWidth="18dp"
+                android:minHeight="18dp"
+                android:padding="4dp"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Product Image ViewPager -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/imageViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/header" />
+
+    <!-- Left Arrow Icon -->
+    <ImageButton
+        android:id="@+id/leftArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        android:layout_alignTop="@id/imageViewPager"
+        android:layout_alignBottom="@id/imageViewPager"
+        android:background="@null"/>
+
+    <!-- Right Arrow Icon -->
+    <ImageButton
+        android:id="@+id/rightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:layout_alignTop="@id/imageViewPager"
+        android:layout_alignBottom="@id/imageViewPager"
+        android:layout_alignParentEnd="true"
+        android:background="@null"/>
+
+    <!-- Product Price -->
+    <RelativeLayout
+        android:id="@+id/product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewPager">
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$200"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:textSize="24sp"
+            android:textColor="@color/primary"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/virtualTryOnButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="sans-serif"
+            android:text="Try On"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <!-- Product Title and Details -->
+    <TextView
+        android:id="@+id/productTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Shoes"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/productDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upper- Faux leather and Designed with 3 different changeable straps\nInner- Faux leather\nInner sole- triple layer foam padded sole\nOuter sole- high-quality synthetic sole"
+        android:layout_below="@id/productTitle"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp" />
+
+    <!-- Seller Information and Buy Button -->
+    <RelativeLayout
+        android:id="@+id/sellerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productDetails"
+        android:layout_marginTop="24dp"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="Add Cart"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/buyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_below="@+id/btnCart"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:text="Buy Now"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

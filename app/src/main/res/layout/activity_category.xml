@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ECEEEF"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Add any other header views or elements here -->
+
+    </RelativeLayout>
+
+    <!-- Category Images -->
+    <LinearLayout
+        android:id="@+id/categoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center"
+        >
+
+        <!-- Category 1 -->
+        <ImageView
+            android:id="@+id/imageViewSunglasses"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/glass19"
+            android:background="@drawable/round_background" />
+
+        <!-- Category 2 -->
+        <ImageView
+            android:id="@+id/imageViewCategory2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/watch"
+            android:background="@drawable/round_background" />
+
+        <!-- Category 3 -->
+        <ImageView
+            android:id="@+id/imageViewCategory3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/chair"
+            android:background="@drawable/round_background"
+            />
+
+        <!-- Add more category image views as needed -->
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#ECEEEF"
+        >
+
+        <!-- Icons for the navigation bar -->
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_home_24" />
+
+        <ImageView
+            android:id="@+id/category"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/category" />
+
+
+        <ImageView
+            android:id="@+id/userProfileIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_person_outline_24" />
+
+        <!-- More icons will follow with equal 'layout_weight' values -->
+
+    </LinearLayout>
+
+</RelativeLayout>
